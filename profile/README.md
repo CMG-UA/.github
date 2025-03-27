@@ -1,81 +1,105 @@
-# CMG-UA Github manual
+# CMG-UA GitHub Manual
 
-This is the github page of the Center of Medical Genetics (CMG) from UZA and University of Antwerp. If you are new here and want to collaborate on some projects take a look at these best practises and how our flow is.
+This is the GitHub page of the Center for Medical Genetics (CMG) at UZA and the University of Antwerp. If you are new here and want to collaborate on projects, take a look at these best practices and workflow guidelines.
 
-more information about the CMG can be found on the [website of CMG](https://www.genetica-antwerpen.be/en/)
+More information about CMG can be found on the [CMG website](https://www.genetica-antwerpen.be/en/).
 
 ## Best Practices
 
-All the code of CMG needs to be placed on Github and not only on the server.
+All CMG code must be stored on GitHub, not just on the server.
 
-**GITHUB IS NOT A DATA-STORAGE! Nothing larger than 50MB should be commited here.**
+**GITHUB IS NOT A DATA STORAGE PLATFORM! Do not commit files larger than 50MB.**
 
-- Always try to keep code documented
-- Each project has one repository with a dedicated README.md
-- Use the special repositories for code that is commenly used
+- Always document your code properly.
+- Each project should have its own repository with a dedicated `README.md` file.
+- Use special repositories for code that is commonly used across projects.
 
-## How to use Github
+## How to Use GitHub
 
-A nice cheatsheet for reference is the following one [Github education cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf).
+A useful cheat sheet for reference: [GitHub Education Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf).
 
-### Some commands that you will need:
+### Essential Git Commands
 
-To make a branch where you can make changes on the code without changing the original:
-`$ git checkout -b <branch_name>`
+To create a new branch for making changes without modifying the original code:
 
-To check the status of your local branch: `$ git status`
+```bash
+git checkout -b <branch_name>
+```
 
-To add the changes you have made to github: `$ git add <your_changes>`
+To check the status of your local branch:
 
-To commit the changes after you have added them and give some usefull information about the changes:
-`$ git commit -m "<usefull message about what the commit is>"`
+```bash
+git status
+```
 
-To put the changes on the Github page: `$ git push`
+To add your changes to Git:
 
-### Adding your code to the main branch
+```bash
+git add <your_changes>
+```
 
-When you are done with your branch and you want these to be with the main branch, you need to make a **pull request** on the Github page of CMG.
+To commit your changes with a descriptive message:
 
-This can be done by going to the project and the branch your code is one, clicking on **Contribute**, checking compare and then clicking on **Open pull request**.
+```bash
+git commit -m "<descriptive commit message>"
+```
 
-**NEVER PUSH TO THE MAIN BRANCH!**
+To push your changes to GitHub:
 
-### If you have an issue
+```bash
+git push
+```
 
-You can make an issue on the github page by the branch you have to issue on. Try always to be so complete as possible so that the person who is solving the issue has all the necessary information.
+### Merging Your Code into the Main Branch
 
-Your question will be registered. Don't hesitate to ask questions, these conversations can also be helpfull for other people later on.
+Once your work is complete, you need to create a **pull request** on the CMG GitHub page to merge your changes into the main branch.
 
-You can do this by clicking on the **issue** button next to the code button. Then click on **New issue**.
+Steps to create a pull request:
+1. Go to the project repository and select your branch.
+2. Click on **Contribute** → **Compare & pull request**.
+3. Review your changes and click **Open pull request**.
 
-### Wanting something from another's project 
+**NEVER PUSH DIRECTLY TO THE MAIN BRANCH!**
 
-If you want something from another's project but their hands are tied? Then you can fork the project to make your own copy repo. Update it accordingly and make a pull request of the feature when it is ready.
+### Reporting Issues
 
-### Special repositories for commonly used code
+If you encounter an issue, you can create a **GitHub Issue** in the project repository.
 
-If you have code that you think is generic, you should put it in a common library to help your colleagues.
+- Be as detailed as possible to help the person resolving the issue.
+- Asking questions is encouraged—your discussion may help others in the future.
 
-This code needs to be:
+To create an issue:
+1. Navigate to the **Issues** tab next to the **Code** tab.
+2. Click **New issue**.
 
-- Well-documented (README.md)
-- Tested (strongly recommended)
+### Forking Another Person’s Project
 
-If you want to use a special repositoy, you can submodule these into your own project, this creates something like a soft link to the special repository.
+Need something from another project but can’t modify it directly? You can **fork** the repository to create your own copy. Once you’ve made your updates, submit a pull request to contribute your changes back.
 
-## Collab flow
+### Special Repositories for Common Code
 
-This is the kind of flow you want to follow when working with GitHub. The chart give a perfect simple overview:
+If you have code that is widely useful, place it in a common library to benefit your colleagues.
 
-1. Make your own branch from the project
-2. Do a git clone local of the branch
-3. Make changes to the original code or add your code
-4. Add, commit, push changes to your own branch
-5. When ready: merge the master branch with your own local version 
-6. Fix issues if there are after mergin
-7. When fixed: Do pull request with the main branch
+This code should be:
+- Well-documented (with a `README.md` file).
+- Thoroughly tested (strongly recommended).
 
-![GitHub Flow](https://media.geeksforgeeks.org/wp-content/uploads/20220214111138/GitHubFlow.jpg) (source: https://www.geeksforgeeks.org/git-flow-vs-github-flow/)
+To use a special repository in your project, you can **add it as a submodule**, which creates a soft link to the repository.
+
+## Collaboration Workflow
+
+Follow this workflow when working with GitHub:
+
+1. Create your own branch from the project.
+2. Clone the repository locally.
+3. Modify the code or add new features.
+4. Add, commit, and push your changes to your branch.
+5. When ready, merge the latest changes from the main branch into your branch.
+6. Fix any issues that arise after merging.
+7. Once everything is resolved, submit a **pull request** to merge your branch into the main branch.
+
+![GitHub Flow](https://media.geeksforgeeks.org/wp-content/uploads/20220214111138/GitHubFlow.jpg)  
+(Source: [GeeksforGeeks](https://www.geeksforgeeks.org/git-flow-vs-github-flow/))
 
 Kind regards,  
-Bioinformatics team
+**Bioinformatics Team**
